@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Quicksand:wght@300;400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,36 +6,40 @@
   padding: 0;
 }
 
+:root {
+  --mainBg: #e8ecec;
+  --mainCl: #282c30;
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #dcdddd;
-  color: #282c30;
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--mainBg);
+  color: var(--mainCl);
   line-height: 1.4;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
+.container {
   max-width: 80%;
   margin: 0 auto;
-  min-height: 100vh;
 }
-
-a {
-  color: #282c30;
+.logo_text {
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-}
-
-p {
-  margin: 5px 0;
-  line-height: 1.7;
+  color: var(--mainCl);
+  opacity: 0.8;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 2rem;
 }
 
 ul {
   display: flex;
-}
-ul {
   list-style: none;
 }
 
@@ -43,15 +47,22 @@ li {
   margin-right: 25px;
 }
 
-.resume {
-  border: 1px solid #282c30;
+li a {
+  text-decoration: none;
+  color: var(--mainCl);
   border-radius: 8px;
   padding: 6px 14px;
 }
 
-.hov:hover {
-  border-bottom: 2px solid #282c30;
+.resume {
+  border: #282c30 1px solid;
 }
+
+li a:hover {
+  background-color: var(--mainCl);
+  color: var(--mainBg);
+}
+
 main {
   display: flex;
   justify-content: left;
@@ -71,8 +82,8 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    max-width: 90%;
+  .container {
+    max-width: 75%;
   }
 
   ul {
@@ -80,7 +91,7 @@ main {
   }
   li {
     margin-top: 1rem;
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .resume {
@@ -90,5 +101,19 @@ main {
   .logo a {
     margin: 0;
     font-size: 1.7rem;
+  }
+
+  .hero-section h1 {
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .hero-section p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
   }
 }
